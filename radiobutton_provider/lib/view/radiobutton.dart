@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:radiobutton_provider/view/controller/radio_provider.dart';
@@ -14,26 +16,35 @@ class Radiolistpage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Consumer<RadioProvider>(builder: (context, value, child) {
-               return Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-               RadioListTile(title: Text('female')
-                ,value: 'female', groupValue: value.radiovalue, onChanged:((val) =>value.selectbutton(val)),
-               ),
-                RadioListTile(title: Text('male'),
-                  value: 'male', groupValue: value.radiovalue, onChanged:((val) => value.selectbutton(val)),
-                ),
-              ],
-            );
-          },
+          Consumer<RadioProvider>(
+            builder: (context, value, child) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RadioListTile(
+                    title: Text('female'),
+                    value: 'female',
+                    groupValue: value.radiovalue,
+                    onChanged: ((val) => value.selectbutton(val)),
+                  ),
+                  RadioListTile(
+                    title: Text('male'),
+                    value: 'male',
+                    groupValue: value.radiovalue,
+                    onChanged: ((val) => value.selectbutton(val)),
+                  ),
+                ],
+              );
+            },
           ),
-          ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Displayscreen()));
-          }, child: Text('ADD'))
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Displayscreen()));
+              },
+              child: Text('ADD'))
         ],
       ),
-  
     );
   }
 }
