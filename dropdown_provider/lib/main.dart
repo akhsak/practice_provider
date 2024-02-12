@@ -1,5 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:dropdown_provider/controller/dropdown_provider.dart';
-import 'package:dropdown_provider/dropdown.dart';
+import 'package:dropdown_provider/view/dropdown.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

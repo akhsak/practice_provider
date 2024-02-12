@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class DropdownProvider extends ChangeNotifier {
- 
- final iconprovider=TextEditingController();
+   String selectedValue = 'Opt1';
 
+  void setSelectedValue(String val) {
+    selectedValue = val;
+    notifyListeners();
+  }
 
-  
-}
+ }
