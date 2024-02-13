@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:radiobutton_provider/view/controller/radio_provider.dart';
+import 'package:radiobutton_provider/controller/radio_provider.dart';
 
 class Displayscreen extends StatelessWidget {
   const Displayscreen({super.key});
