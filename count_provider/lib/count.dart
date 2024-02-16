@@ -18,13 +18,19 @@ class Countpage extends StatelessWidget {
           children: [
             Consumer<CountProvider>(
                 builder: (context, value, child) => Text('${value.a}')),
-            Text('click',style: TextStyle(color: Colors.blue),),
+            Text(
+              'click',
+              style: TextStyle(color: Colors.blue),
+            ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Provider.of<CountProvider>(context, listen: false).abc();
-      },child: Icon(Icons.add),),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Provider.of<CountProvider>(context, listen: false).abc();
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 }

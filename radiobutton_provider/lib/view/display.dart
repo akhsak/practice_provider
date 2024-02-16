@@ -9,7 +9,7 @@ class Displayscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(Provider.of<RadioProvider>(context).radiovalue),
+        child: Text(Provider.of<RadioProvider>(context,listen: false).radiovalue),
       ),
       
     );
