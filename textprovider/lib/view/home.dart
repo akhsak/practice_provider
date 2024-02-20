@@ -4,29 +4,30 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:textprovider/controller/provider.dart';
 
-class homepage extends StatelessWidget {
-  const homepage({super.key});
+class Homepage extends StatelessWidget {
+  const Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final changeprv=Provider.of<ChangeProvider>(context,listen: false);
-    TextEditingController text1=TextEditingController();
-    TextEditingController  text2=TextEditingController();
+    final changeprv = Provider.of<ChangeProvider>(context, listen: false);
+
     return Scaffold(
       body: Column(
         children: [
           TextField(
-            controller: text1,
+            controller: changeprv.text1Controller,
           ),
-          TextField(controller: text2,),
-          ElevatedButton(onPressed: (){
-            changeprv.change1(text1.text);
-            changeprv.change2(text2.text);
-          }, child: Text('click')),
-          Consumer<ChangeProvider>(builder:(context, value, child) => Text(value.sumtext)),
+          TextField(controller: changeprv.text2Controller),
+          ElevatedButton(
+              onPressed: () {
+                changeprv.change1(changeprv.text1Controller.text);
+                changeprv.change2(changeprv.text2Controller.text);
+              },
+              child: Text('click')),
+          Consumer<ChangeProvider>(
+              builder: (context, value, child) => Text(value.sumtext)),
         ],
       ),
-
     );
   }
 }
