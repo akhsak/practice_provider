@@ -6,7 +6,7 @@ class ColorProvider extends ChangeNotifier {
   int b = 0;
 
   colorchange() {
-    b = (b + 1) % a.length;
+    b = (b + 1)%a.length;
     notifyListeners();
   }
 }

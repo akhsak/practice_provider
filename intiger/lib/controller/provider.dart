@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Intiger extends ChangeNotifier {
+class Intigerprovider extends ChangeNotifier {
   
   final text1=TextEditingController();
   final text2=TextEditingController();

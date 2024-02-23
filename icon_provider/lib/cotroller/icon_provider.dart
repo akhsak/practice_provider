@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 
 class IconProvider extends ChangeNotifier {
   final iconcotroller = TextEditingController();
-       
 
+  Map<String, IconData> iconName = {
+    'home':Icons.home ,
+    'favorite': Icons.favorite,
+    'abc': Icons.abc,
+    };
 
-  Map<String, IconData> iconName = {'home': Icons.home};
-  
   IconData? selectedicon;
   void taketext() {
     String entertext = iconcotroller.text.toLowerCase();

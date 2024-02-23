@@ -9,11 +9,11 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final addprovider = Provider.of<Intiger>(context, listen: false);
+    final addprovider = Provider.of<Intigerprovider>(context, listen: false);
     return Scaffold(
       body: Column(
         children: [
-          Consumer<Intiger>(
+          Consumer<Intigerprovider>(
               builder: (context, value, child) => Text(value.a.toString())),
           TextField(
             controller: addprovider.text1,

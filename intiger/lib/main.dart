@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(create: (context) => Intiger() ,
+    return ChangeNotifierProvider(create: (context) => Intigerprovider() ,
       child: MaterialApp(
         home:Homepage() ,
       ),
