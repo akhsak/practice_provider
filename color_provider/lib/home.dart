@@ -12,7 +12,7 @@ class Homepage extends StatelessWidget {
       body: Column(
         children: [
           TextField(
-            controller: colorprovider.iconcotroller,
+            controller: colorprovider.colorcotroller,
            // onChanged: (value) => colorprovider.taketext(),
           ),
           ElevatedButton(

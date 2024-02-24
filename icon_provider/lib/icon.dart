@@ -32,7 +32,7 @@ class Iconselectpage extends StatelessWidget {
                     : SizedBox(),
               ),
             ),
-          ),
+          )
         ],
       ),
     );

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ColorProvider extends ChangeNotifier {
-  final iconcotroller = TextEditingController();
+  final colorcotroller = TextEditingController();
 
-  Map<String, Color> iconName = {
+  Map<String, Color> colorName = {
     'black': Colors.black,
     'red': Colors.red,
     'green': Colors.green,
@@ -11,13 +11,12 @@ class ColorProvider extends ChangeNotifier {
 
   Color? selectedcolor;
   void taketext() {
-    String entertext = iconcotroller.text.toLowerCase();
-    if (iconName.containsKey(entertext)) {
-      selectedcolor = iconName[entertext];
+    String entertext = colorcotroller.text.toLowerCase();
+    if (colorName.containsKey(entertext)) {
+      selectedcolor = colorName[entertext];
     } else {
       selectedcolor = null;
     }
     notifyListeners();
-  }
-  
+  }  
 }
