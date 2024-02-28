@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
 class TextProvider extends ChangeNotifier {
+  final nameController = TextEditingController();
 
-  final nameController=TextEditingController();
-   
-   String a='';
-  void textentered(){
-      a=nameController.text;
-      notifyListeners();
-
+  String a = '';
+  void textentered() {
+    a = nameController.text;
+    notifyListeners();
   }
-  
 }

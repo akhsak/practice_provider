@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -18,7 +17,7 @@ class Homepage extends StatelessWidget {
             onChanged: (value) => sizeprovider.sizechange(),
 
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Consumer<SizeProvider>(builder: (context, value, child) => 
              Container(
                     height:value.selcted?.toDouble()??20,

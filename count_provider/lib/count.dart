@@ -19,7 +19,9 @@ class Countpage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Consumer<CountProvider>(
-                builder: (context, value, child) => Text('${value.a}')),
+                builder: (context, value, child) =>
+                 Text('${value.a}')
+                 ),
             Text(
               'click',
               style: TextStyle(color: Colors.blue),

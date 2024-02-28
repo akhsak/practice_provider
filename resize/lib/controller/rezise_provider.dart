@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ResizeProvider extends ChangeNotifier {
   bool resize=true;
-  changesize(){
+  void changesize(){
     resize=!resize;
     notifyListeners();
 

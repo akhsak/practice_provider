@@ -7,15 +7,16 @@ class Textpage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textProvider=Provider.of<TextProvider>(context,listen: false);
+    final textProvider = Provider.of<TextProvider>(context, listen: false);
     return Scaffold(
-      body: Column(   
+      body: Column(
         children: [
           TextField(
-            controller:textProvider.nameController ,
-            onChanged: (value) =>textProvider.textentered(),
+            controller: textProvider.nameController,
+            onChanged: (value) => textProvider.textentered(),
           ),
-          Consumer<TextProvider>(builder:(context, value, child) => Text(value.a))
+          Consumer<TextProvider>(
+              builder: (context, value, child) => Text(value.a))
         ],
       ),
     );

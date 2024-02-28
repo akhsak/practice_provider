@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:count_provider/controller/count_provider.dart';
 import 'package:count_provider/count.dart';
 import 'package:flutter/material.dart';

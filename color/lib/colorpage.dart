@@ -19,7 +19,7 @@
 //         child: Column(
 //           mainAxisAlignment: MainAxisAlignment.center,
 //           children: [
-//             Consumer<ColorProvider>(builder: (context, value, child) => 
+//             Consumer<ColorProvider>(builder: (context, value, child) =>
 //                CircleAvatar(
 //                   radius:50,
 //                   backgroundColor: value.a[value.b],
@@ -36,6 +36,35 @@
 //     );
 //   }
 // }
+// import 'package:color/controller/color_provider.dart';
+// import 'package:flutter/material.dart';
+// import 'package:provider/provider.dart';
+
+// class Colorpage extends StatelessWidget {
+//   const Colorpage({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Consumer<ColorProvider>(builder: (context, value, child) =>
+//        Scaffold(
+//         backgroundColor: value.a.elementAt(value.b),
+//         body: Consumer<ColorProvider>(builder: (context, value, child) =>
+//            Column(
+//             children: [
+//               Center(
+//                 child: ElevatedButton(onPressed: (){
+//                   value.colorchange();
+//                 }, child: const Text("click here")),
+//               )
+
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
 import 'package:color/controller/color_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -45,22 +74,19 @@ class Colorpage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ColorProvider>(builder: (context, value, child) => 
-       Scaffold(
-        backgroundColor: value.a.elementAt(value.b),
-        body: Consumer<ColorProvider>(builder: (context, value, child) => 
-           Column(
+    return Consumer<ColorProvider>(
+      builder: (context, value, child) => Scaffold(
+          backgroundColor: value.a[value.b],
+          body: Column(
             children: [
-              Center(
-                child: ElevatedButton(onPressed: (){
-                  value.colorchange();
-                }, child: const Text("click here")),
-              )
-            
+              ElevatedButton(
+                  onPressed: () {
+                    Provider.of<ColorProvider>(context, listen: false)
+                        .colorchange();
+                  },
+                  child: Text('done'))
             ],
-          ),
-        ),
-      ),
+          )),
     );
   }
 }
